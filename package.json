@@ -1,0 +1,62 @@
+{
+  "name": "kee",
+  "version": "1.0.0",
+  "description": "keyframed animation tools",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com"
+  },
+  "dependencies": {
+    "eases": "^1.0.2",
+    "frame-loop": "^1.1.1",
+    "inherits": "^2.0.1",
+    "keyframes": "^2.1.2",
+    "lerp-array": "^1.0.2"
+  },
+  "devDependencies": {
+    "brfs": "^1.2.0",
+    "canvas-testbed": "^0.4.0",
+    "color-style": "^1.0.0",
+    "dom-events": "^0.1.1",
+    "dom-style": "0.0.3",
+    "domify": "^1.3.0",
+    "domready": "^1.0.6",
+    "eases": "^1.0.2",
+    "insert-css": "^0.2.0",
+    "lerp": "^1.0.0",
+    "lerp-array": "^1.0.2",
+    "path-illustrator-client": "git://github.com/mattdesl/path-illustrator-client",
+    "tape": "~2.13.2"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "testling": {
+    "files": "test.js",
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/kee.git"
+  },
+  "homepage": "https://github.com/mattdesl/kee",
+  "bugs": {
+    "url": "https://github.com/mattdesl/kee/issues"
+  },
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+.box {
+	background-color: white;
+	
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;	
+    color: white;
+
+    margin: auto;
+    cursor: pointer;
+    text-align: center;
+	
+	border: 0px solid black;
+	display: inline-block;
+
+	overflow: hidden;
+}
+
+.info {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	margin: 0;
+}
+p {
+	margin: 2px;
+}
+
+body {
+	font: 16px 'Helvetica', sans-serif;
+}
