@@ -36,7 +36,7 @@ var sprite = {
 
 //draw the frame at the given frame time
 function render(ctx, time) {
-	//store the interpolated properties in the sprite object
+	//update the object with the animated properties
 	timeline.values(time, sprite)
 
 	//draw the sprite
