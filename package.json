@@ -4,10 +4,7 @@
   "description": "keyframed animation tools",
   "main": "index.js",
   "license": "MIT",
-  "author": {
-    "name": "Matt DesLauriers",
-    "email": "dave.des@gmail.com"
-  },
+  "author": "Matt DesLauriers <dave.des@gmail.com>",
   "dependencies": {
     "eases": "^1.0.2",
     "inherits": "^2.0.1",
@@ -56,5 +53,29 @@
   "homepage": "https://github.com/mattdesl/keytime",
   "bugs": {
     "url": "https://github.com/mattdesl/keytime/issues"
-  }
+  },
+  "keywords": [
+    "key",
+    "frame",
+    "keyframe",
+    "keyframes",
+    "frames",
+    "keys",
+    "animation",
+    "tween",
+    "tweening",
+    "anim",
+    "animations",
+    "lerp",
+    "interpolation",
+    "interpolating",
+    "animating",
+    "tweens",
+    "ease",
+    "eases",
+    "easings",
+    "function",
+    "timeline",
+    "time"
+  ]
 }
