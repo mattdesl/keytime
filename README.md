@@ -44,7 +44,7 @@ console.log( values.position )
 
 ### properties
 
-A property holds a set of [keyframes](https://github.com/mattdesl/keyframes), a unique `name` identifier, a default `value` (used when no keyframes are present), and an optional `type` for application-specific extensions. 
+A property holds a set of [keyframes](https://github.com/mattdesl/keyframes), a unique `name` identifier and a default `value` (used when no keyframes are present).
 
 ### keyframes
 
@@ -100,7 +100,6 @@ An array containing all of the properties in this timeline. Each property has:
 
 - `name` the unique name
 - `value` a value to use as a constant (or default) when no keyframes exist
-- `type` a string hint for the application level to handle interpolation, defaults to `'array'`
 - `keyframes` an instance of [keyframes](https://github.com/mattdesl/keyframes)
 
 And has the methods:

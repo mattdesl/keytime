@@ -10,7 +10,7 @@ function TimelineCSS(data) {
 
 inherits(TimelineCSS, Base)
 
-TimelineCSS.prototype.interpolate = function(type, frame1, frame2, t) {
+TimelineCSS.prototype.interpolate = function(property, frame1, frame2, t) {
 	return lerp(frame1.value, frame2.value, t)
 }
 

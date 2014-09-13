@@ -62,7 +62,7 @@ TimelineBase.prototype.ease = function(name, t) {
 
 //Interpolate between two frames; subclasses can override to provide custom 
 //interpolators (e.g. quaternions, paths, etc)
-TimelineBase.prototype.interpolate = function(type, frame1, frame2, t) {
+TimelineBase.prototype.interpolate = function(property, frame1, frame2, t) {
 	return lerp(frame1.value, frame2.value, t)
 }
 
@@ -90,7 +90,7 @@ TimelineBase.prototype.valueOf = function(time, property) {
 		var easeName = end.ease
 		if (easeName) //remap time with easing equation
 			t = this.ease(easeName, t)
-		return this.interpolate(property.type, start, end, t)
+		return this.interpolate(property, start, end, t)
 	}
 }
 
