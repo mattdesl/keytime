@@ -26,9 +26,9 @@ There are a couple examples in the [demo](demo/) folder. Here are two:
 
 [![NPM](https://nodei.co/npm/keytime.png)](https://nodei.co/npm/keytime/)
 
-This module builds on [keyframes](https://github.com/mattdesl/keyframes) to interpolate between keyframe values.
+This module builds on [keyframes](https://github.com/mattdesl/keyframes) to interpolate between keyframe values. 
 
-### timeline
+#### timeline
 
 A timeline provides a list of named `properties` that make up this keyframed timeline. It also handles easing and interpolation. The default timeline interpolates numbers and arrays of numbers; and supports a [set of common easing equations](https://github.com/mattdesl/eases).
 
@@ -49,6 +49,11 @@ A property holds a set of [keyframes](https://github.com/mattdesl/keyframes), a 
 ### keyframes
 
 The keyframes hold a `time` stamp (no assumptions are made about unit of time), a `value` (can be array, number, object, etc). They can optionally include an `ease`. For a pair of keyframes, the second determines the easing function; so the ease of the first keyframe in a timeline is ignored.
+
+## Wiki
+
+- [keytime format](wiki/Format)
+- [subclassing keytime](wiki/Subclassing)
 
 ## API
 
@@ -106,11 +111,6 @@ And has the methods:
 
 - `property.dispose()` which clears its keyframes
 - `property.load(data)` which disposes the keyframes, then loads new property data
-
-## easings
-
-By default, the `index.js` entry-point exposes a [common set of eases](https://github.com/mattdesl/eases) and uses [number and array interpolation](https://github.com/mattdesl/lerp-array). You can require `keytime/base` to avoid bundling the `eases` functions, or you can override `keytime` if you want to provide additional easings or interpolators (see the [DOM demo](demo/dom)).
-
 
 ## running/building demos
 
