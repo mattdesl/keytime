@@ -52,8 +52,8 @@ The keyframes hold a `time` stamp (no assumptions are made about unit of time), 
 
 ## Wiki
 
-- [keytime format](wiki/Format)
-- [subclassing keytime](wiki/Subclassing)
+- [keytime format](https://github.com/mattdesl/keytime/wiki/Format)
+- [subclassing keytime](https://github.com/mattdesl/keytime/wiki/Subclassing)
 
 ## API
 
