@@ -11,8 +11,8 @@ var mapStyle = require('./map-css')
 var events = require('dom-events')
 var Timeline = require('./timeline-css')
 
-var anim1 = Timeline( require('./data/dom-1') )
-var anim2 = Timeline( require('./data/dom-2') )
+var anim1 = Timeline( require('../data/dom-1') )
+var anim2 = Timeline( require('../data/dom-2') )
 var curTimeline = anim1
 
 function Widget(animation) {

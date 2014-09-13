@@ -1,4 +1,4 @@
-var Base = require('../')
+var Base = require('../../') //require('keytime')
 var inherits = require('inherits')
 var lerp = require('./lerp-css')
 

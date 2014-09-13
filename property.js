@@ -5,7 +5,6 @@
 //  alpha [a]
 
 var keyframes = require('keyframes')
-
 var DEFAULT_TYPE = 'array'
 
 function Property(data) {
@@ -24,7 +23,6 @@ Property.prototype.dispose = function() {
 	this.keyframes.clear()
 }
 
-//updates displayed value based on playhead position
 Property.prototype.load = function(data) {
 	this.dispose()
 

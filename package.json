@@ -1,6 +1,6 @@
 {
-  "name": "kee",
-  "version": "1.0.0",
+  "name": "keytime",
+  "version": "0.0.0",
   "description": "keyframed animation tools",
   "main": "index.js",
   "license": "MIT",
@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "eases": "^1.0.2",
-    "frame-loop": "^1.1.1",
     "inherits": "^2.0.1",
     "keyframes": "^2.1.2",
     "lerp-array": "^1.0.2"
@@ -24,14 +23,18 @@
     "domify": "^1.3.0",
     "domready": "^1.0.6",
     "eases": "^1.0.2",
+    "frame-loop": "^1.1.1",
     "insert-css": "^0.2.0",
     "lerp": "^1.0.0",
     "lerp-array": "^1.0.2",
-    "path-illustrator-client": "git://github.com/mattdesl/path-illustrator-client",
+    "path-illustrator-client": "git://github.com/mattdesl/path-illustrator-client#dafe6742357137fab06e7681c7299cb61ae8b739",
     "tape": "~2.13.2"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "dev-dom": "beefy demo/dom/index.js --index=demo/dom/index-dev.html --open -- -t brfs",
+    "build-dom": "browserify demo/dom/index.js -t brfs | uglifyjs -cm > demo/dom/bundle/bundle.js",
+    "dev-canvas": "beefy demo/canvas/simple.js --open -- -t brfs"
   },
   "testling": {
     "files": "test.js",
@@ -48,15 +51,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mattdesl/kee.git"
+    "url": "git://github.com/mattdesl/keytime.git"
   },
-  "homepage": "https://github.com/mattdesl/kee",
+  "homepage": "https://github.com/mattdesl/keytime",
   "bugs": {
-    "url": "https://github.com/mattdesl/kee/issues"
-  },
-  "browserify": {
-    "transform": [
-      "brfs"
-    ]
+    "url": "https://github.com/mattdesl/keytime/issues"
   }
 }

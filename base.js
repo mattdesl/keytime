@@ -25,6 +25,7 @@ TimelineBase.prototype.dispose = function() {
 	this.properties.length = 0 
 }
 
+//Finds the max duration of all properties
 TimelineBase.prototype.duration = function() {
 	var maxTime = 0
 	for (var j=0; j<this.properties.length; j++) {
@@ -42,6 +43,7 @@ TimelineBase.prototype.property = function(prop) {
 	return idx<0 ? undefined : this.properties[idx]
 }
 
+//Loads timeline animation data
 TimelineBase.prototype.load = function(data) {
 	this.dispose()
 
@@ -53,15 +55,19 @@ TimelineBase.prototype.load = function(data) {
 	})
 }
 
+//Eases the time; by default only linear ease is supported (entry point exposes others)
 TimelineBase.prototype.ease = function(name, t) {
 	return t
 }
 
+//Interpolate between two frames; subclasses can override to provide custom 
+//interpolators (e.g. quaternions, paths, etc)
 TimelineBase.prototype.interpolate = function(type, frame1, frame2, t) {
 	return lerp(frame1.value, frame2.value, t)
 }
 
-TimelineBase.prototype.value = function(time, property) {
+//Determine the value at the given time stamp of the specified property
+TimelineBase.prototype.valueOf = function(time, property) {
 	var keys = property.keyframes,
 		v = keys.interpolation(time),
 		v0 = v[0],
@@ -88,5 +94,15 @@ TimelineBase.prototype.value = function(time, property) {
 	}
 }
 
+//Convenience to get the values of all properties at a given time stamp
+TimelineBase.prototype.values = function(time, out) {
+	if (!out)
+		out = {}
+	for (var i=0; i<this.properties.length; i++) {
+		var prop = this.properties[i]
+		out[prop.name] = this.valueOf(time, prop)
+	}
+	return out
+}
 
 module.exports = TimelineBase
