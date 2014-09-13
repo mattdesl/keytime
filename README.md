@@ -22,6 +22,11 @@ There are a couple examples in the [demo](demo/) folder. Here are two:
 - [canvas/path animation](http://mattdesl.github.io/timeline-tests/demo1/index.html) - animates paths created with [path-illustrator](http://mattdesl.github.io/path-illustrator/demo/advanced.html)
 - [CSS animation and timeline switching](http://mattdesl.github.io/keytime/demo/dom/)
 
+## Wiki
+
+- [keytime format](https://github.com/mattdesl/keytime/wiki/Format)
+- [subclassing keytime](https://github.com/mattdesl/keytime/wiki/Subclassing)
+
 ## Usage
 
 [![NPM](https://nodei.co/npm/keytime.png)](https://nodei.co/npm/keytime/)
@@ -49,11 +54,6 @@ A property holds a set of [keyframes](https://github.com/mattdesl/keyframes), a 
 #### `keyframes`
 
 The keyframes hold a `time` stamp (no assumptions are made about unit of time), a `value` (can be array, number, object, etc). They can optionally include an `ease`. For a pair of keyframes, the second determines the easing function; so the ease of the first keyframe in a timeline is ignored.
-
-## Wiki
-
-- [keytime format](https://github.com/mattdesl/keytime/wiki/Format)
-- [subclassing keytime](https://github.com/mattdesl/keytime/wiki/Subclassing)
 
 ## API
 

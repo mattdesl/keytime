@@ -61,7 +61,7 @@ function start() {
 
 
 	var txt = '<p>click button to change timelines</p>'
-			+ '<p>animation data <a href="https://github.com/mattdesl/timeline-tests/tree/master/demo2/data">here</a></p>'
+			+ '<p>animation data <a href="https://github.com/mattdesl/keytime/tree/master/demo/data">here</a></p>'
 	document.body.appendChild(domify('<div class="info">'+txt+'</div>'))
 }
 
