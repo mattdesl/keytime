@@ -1,4 +1,4 @@
-[![browser support](https://ci.testling.com/mattdesl/keytime.png)](https://ci.testling.com/mattdesl/keytime)
+[![img](http://i.imgur.com/6vBJwmP.png)](http://mattdesl.github.io/timeline-tests/demo1/index.html)
 
 # keytime
 
@@ -14,6 +14,13 @@ The idea is to break down animation data into a simple format that can easily be
 - custom interpolators and easing functions are easy to add (e.g. interpolating CSS properties)
 - easy to pipe into other tools, like a visual editor for designers
 - using CommonJS to export animation data, so you can `require('mattdesl/my-fancy-timeline')`
+
+## demos
+
+There are a couple examples in the [demo](demo/) folder. Here are two:
+
+- [canvas/path animation](http://mattdesl.github.io/timeline-tests/demo1/index.html)
+- [CSS animation and timeline switching](http://mattdesl.github.io/keytime/demo/dom/)
 
 ## Usage
 
