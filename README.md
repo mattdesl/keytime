@@ -15,6 +15,8 @@ The idea is to break down animation data into a simple format that can easily be
 - easy to pipe into other tools, like a visual editor for designers
 - using CommonJS and JSON to export animation data, so you can `require('mattdesl/my-fancy-timeline')`
 
+This does not implement its own loop or `play()`, `pause()` methods. It simply allows the developer to retrieve interpolated values at an arbitrary time stamp (which may be in seconds, milliseconds, centuries, or whatever).
+
 ## demos
 
 There are a couple examples in the [demo](demo/) folder. Here are two:
