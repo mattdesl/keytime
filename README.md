@@ -54,12 +54,12 @@ There are a couple examples in the [demo](demo/) folder. Here are two:
 - [canvas/path animation](http://mattdesl.github.io/timeline-tests/demo1/index.html) - animates paths created with [path-illustrator](http://mattdesl.github.io/path-illustrator/demo/advanced.html)
 - [CSS animation and timeline switching](http://mattdesl.github.io/keytime/demo/dom/)
 
-## Wiki
+## wiki
 
 - [keytime format](https://github.com/mattdesl/keytime/wiki/Format)
 - [subclassing keytime](https://github.com/mattdesl/keytime/wiki/Subclassing)
 
-## Usage
+## usage
 
 [![NPM](https://nodei.co/npm/keytime.png)](https://nodei.co/npm/keytime/)
 
@@ -91,7 +91,7 @@ The keyframes hold a `time` stamp (no assumptions are made about unit of time), 
 
 #### `var timeline = require('keytime')([data])`
 
-Creates a new timeline with the optional data in the form of a JS object. The data is assumed to follow the keytime animation format.
+Creates a new timeline with the optional data in the form of a JS object. The data is assumed to follow the [keytime format](https://github.com/mattdesl/keytime/wiki/Format).
 
 #### `timeline.values(timeStamp[, out])`
 
@@ -111,7 +111,7 @@ var sprite = { alpha: 1, x: 0, y: 0, width: 0, height: 0 }
 
 #### `timeline.property(name)`
 
-Searches the timeline for the first property by the given name, or index if a number was provided.
+Searches the timeline and returns the first property by the given name, or index if a number was provided instead. If none is found, `undefined` is returned.
 
 #### `timeline.duration()`
 
