@@ -17,6 +17,35 @@ The idea is to break down animation data into a simple format that can easily be
 
 This does not implement its own loop or `play()`, `pause()` methods. It simply allows the developer to retrieve interpolated values at an arbitrary time stamp (which may be in seconds, milliseconds, centuries, or whatever).
 
+## example
+
+An example of how it might look within a render loop:
+
+```js
+var rgba = require('color-style')
+var data = require('./anim-data.js')
+
+var timeline = require('keytime')(data)
+
+//our basic sprite object
+var sprite = { 
+	fillStyle: [255,255,255], 
+	alpha: 1, 
+	position: [0, 0] 
+}
+
+//draw the frame at the given frame time
+function render(ctx, time) {
+	//store the interpolated properties in the sprite object
+	timeline.values(time, sprite)
+
+	//draw the sprite
+	ctx.fillStyle = rgba(sprite.fillStyle)
+	ctx.globalAlpha = sprite.alpha
+	ctx.fillRect(sprite.position[0], sprite.position[1], 50, 50)
+}
+```
+
 ## demos
 
 There are a couple examples in the [demo](demo/) folder. Here are two:
