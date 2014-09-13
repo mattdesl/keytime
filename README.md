@@ -14,7 +14,7 @@ The idea is to break down animation data into a simple format that can easily be
 - no assumptions about what is being animated; could be numbers, 2D paths, vectors, quaternions, etc
 - custom interpolators and easing functions are easy to add (e.g. interpolating CSS properties)
 - easy to pipe into other tools, like a visual editor for designers
-- using CommonJS and JSON to export animation data, so you can `require('mattdesl/my-fancy-timeline')`
+- using CommonJS and JSON to export animation data, so you can `require('mattdesl/my-fancy-timeline')` and build an ecosystem of timelines and animations
 
 This does not implement its own loop or `play()`, `pause()` methods. It simply allows the developer to retrieve interpolated values at an arbitrary time stamp (which may be in seconds, milliseconds, centuries, or whatever).
 
