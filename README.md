@@ -13,24 +13,24 @@ The idea is to break down animation data into a simple format that can easily be
 - no assumptions about what is being animated; could be numbers, 2D paths, vectors, quaternions, etc
 - custom interpolators and easing functions are easy to add (e.g. interpolating CSS properties)
 - easy to pipe into other tools, like a visual editor for designers
-- using CommonJS to export animation data, so you can `require('mattdesl/my-fancy-timeline')`
+- using CommonJS and JSON to export animation data, so you can `require('mattdesl/my-fancy-timeline')`
 
 ## demos
 
 There are a couple examples in the [demo](demo/) folder. Here are two:
 
-- [canvas/path animation](http://mattdesl.github.io/timeline-tests/demo1/index.html)
+- [canvas/path animation](http://mattdesl.github.io/timeline-tests/demo1/index.html) - animates paths created with [path-illustrator](http://mattdesl.github.io/path-illustrator/demo/advanced.html)
 - [CSS animation and timeline switching](http://mattdesl.github.io/keytime/demo/dom/)
 
 ## Usage
 
 [![NPM](https://nodei.co/npm/keytime.png)](https://nodei.co/npm/keytime/)
 
-This module builds on [keyframes](https://github.com/mattdesl/keyframes) to interpolate between keyframe values. 
+This module builds on [keyframes](https://github.com/mattdesl/keyframes) to interpolate between keyframe values. The core concepts are as follows:
 
-#### timeline
+#### `timeline`
 
-A timeline provides a list of named `properties` that make up this keyframed timeline. It also handles easing and interpolation. The default timeline interpolates numbers and arrays of numbers; and supports a [set of common easing equations](https://github.com/mattdesl/eases).
+A `keytime` instance (or timeline) provides a list of named `properties` that make up this keyframed timeline. It also handles easing and interpolation. The default timeline interpolates numbers and arrays of numbers; and supports a [set of common easing equations](https://github.com/mattdesl/eases).
 
 ```js
 var timeline = require('keytime')(data)
@@ -42,11 +42,11 @@ var values = timeline.values(3)
 console.log( values.position )
 ```
 
-### properties
+#### `properties`
 
 A property holds a set of [keyframes](https://github.com/mattdesl/keyframes), a unique `name` identifier and a default `value` (used when no keyframes are present).
 
-### keyframes
+#### `keyframes`
 
 The keyframes hold a `time` stamp (no assumptions are made about unit of time), a `value` (can be array, number, object, etc). They can optionally include an `ease`. For a pair of keyframes, the second determines the easing function; so the ease of the first keyframe in a timeline is ignored.
 
