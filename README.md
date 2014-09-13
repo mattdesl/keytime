@@ -1,4 +1,5 @@
 [![img](http://i.imgur.com/6vBJwmP.png)](http://mattdesl.github.io/timeline-tests/demo1/index.html)
+<sup>[click to view demo](http://mattdesl.github.io/timeline-tests/demo1/index.html)</sup>
 
 # keytime
 
