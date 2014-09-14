@@ -22,6 +22,8 @@
     "eases": "^1.0.2",
     "frame-loop": "^1.1.1",
     "insert-css": "^0.2.0",
+    "keycode": "^0.3.0",
+    "keytime-editor": "git://github.com/mattdesl/keytime-editor#0.0.0",
     "lerp": "^1.0.0",
     "lerp-array": "^1.0.2",
     "path-illustrator-client": "git://github.com/mattdesl/path-illustrator-client#dafe6742357137fab06e7681c7299cb61ae8b739",
