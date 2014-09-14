@@ -1,6 +1,8 @@
 [![img](http://i.imgur.com/6vBJwmP.png)](http://mattdesl.github.io/timeline-tests/demo1/index.html)  
 <sup>[click to view demo](http://mattdesl.github.io/timeline-tests/demo1/index.html)</sup>
 
+![img](http://i.imgur.com/8CfP20y.png)
+
 # keytime
 
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
@@ -52,7 +54,8 @@ function render(ctx, time) {
 There are a couple examples in the [demo](demo/) folder. Here are two:
 
 - [canvas/path animation](http://mattdesl.github.io/timeline-tests/demo1/index.html) - animates paths created with [path-illustrator](http://mattdesl.github.io/path-illustrator/demo/advanced.html)
-- [CSS animation and timeline switching](http://mattdesl.github.io/keytime/demo/dom/)
+- [CSS animation, basic editor, timeline switching](http://mattdesl.github.io/keytime/demo/dom/)
+
 
 ## wiki
 
