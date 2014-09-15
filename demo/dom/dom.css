@@ -1,6 +1,34 @@
-.box {
-	background-color: white;
+
+.keytime-editor-container {
+	z-index: 10000;
+
+}
+
+.flip {
+	width: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+	height: 100%;
+	border-style: solid;
+	-webkit-transform: rotateX(0deg);
+	-webkit-perspective: 800;
+	-webkit-transform-style: preserve-3d;
+}
+
+.widget {
+	position: absolute;
+	margin: 0;
+	overflow: hidden;
+	text-align: center;
+}
+
+.widget.text {
 	
+}
+
+/* Some default styling for our DOM element. */
+.box, .main {
+	background-color: white;
     position: absolute;
     top:0;
     bottom: 0;
@@ -14,10 +42,17 @@
 	
 	border: 0px solid black;
 	display: inline-block;
-
 	overflow: hidden;
 }
 
+.main {
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top: 0;
+	overflow: visible;
+	left: 0;
+}
 .info {
 	position: absolute;
 	top: 20px;

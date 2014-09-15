@@ -15,6 +15,8 @@
     "brfs": "^1.2.0",
     "canvas-testbed": "^0.4.0",
     "color-style": "^1.0.0",
+    "deepcopy": "^0.3.3",
+    "dom-classes": "0.0.1",
     "dom-events": "^0.1.1",
     "dom-style": "0.0.3",
     "domify": "^1.3.0",

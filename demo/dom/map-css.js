@@ -37,18 +37,22 @@ var css = {
 	},
 	'background-color': rgba,
 	'border-color': rgba,
+	'z-index': String,
 	color: rgba
 }
 
-function map(name, value) {
-	if (typeof css[name] !== 'function')
+function map(name, value, overrides) {
+	var cssMap = css
+	if (overrides && typeof overrides[name] !== 'undefined')
+		cssMap = overrides
+	if (typeof cssMap[name] !== 'function')
 		return px(value)
-	return css[name](value)
+	return cssMap[name](value)
 }
 
-module.exports = function(element, name, value) {
-	var animStyle = map(name, value)
-	if (typeof animStyle === 'string')
+module.exports = function(element, name, value, overrides) {
+	var animStyle = map(name, value, overrides)
+	if (typeof animStyle === 'string' || typeof animStyle === 'number')
 		style(element, name, animStyle)
 	else
 		style(element, animStyle)

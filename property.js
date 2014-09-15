@@ -23,6 +23,15 @@ Property.prototype.dispose = function() {
 	this.keyframes.clear()
 }
 
+Property.prototype.export = function() {
+	return {
+		name: this.name,
+		type: this.type,
+		value: this.value,
+		keyframes: this.keyframes.frames
+	}
+}
+
 Property.prototype.load = function(data) {
 	this.dispose()
 

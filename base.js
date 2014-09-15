@@ -25,6 +25,11 @@ TimelineBase.prototype.dispose = function() {
 	this.properties.length = 0 
 }
 
+TimelineBase.prototype.addProperty = function(propData) {
+	this.properties.push(new Property(propData))
+}
+
+
 //Finds the max duration of all properties
 TimelineBase.prototype.duration = function() {
 	var maxTime = 0
@@ -52,6 +57,12 @@ TimelineBase.prototype.load = function(data) {
 
 	this.properties = data.map(function(d) {
 		return new Property(d)
+	})
+}
+
+TimelineBase.prototype.export = function() {
+	return this.properties.map(function(p) {
+		return p.export()
 	})
 }
 
