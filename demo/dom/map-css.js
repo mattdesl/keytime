@@ -11,6 +11,24 @@ function px(value) {
 	return typeof value === 'number' ? (value+'px') : value
 }
 
+function rotation(value) {
+	return 'rotateX('+value[0]+'deg) rotateY('+value[1]+'deg) rotateZ('+value[2]+'deg)'
+}
+
+function translation(value) {
+	return 'translateX('+value[0]+'px) translateY('+value[1]+'px) translateZ('+value[2]+'px)'
+}
+
+function prefixTransform(str) {
+	return { 
+		'-o-transform': str,
+		'-moz-transform': str,
+		'-ms-transform': str,
+		'-webkit-transform': str,
+		'transform': str,
+	}
+}
+
 //some special ones like colors or groups of properties (position, size)
 var css = {
 	position: function(value) {
@@ -20,14 +38,12 @@ var css = {
 		return { width: px(value[0]), height: px(value[1]) }
 	},
 	rotation: function(value) {
-		var str = 'rotateX('+value[0]+'deg) rotateY('+value[1]+'deg) rotateZ('+value[2]+'deg)'
-		return {
-			'-o-transform': str,
-			'-moz-transform': str,
-			'-ms-transform': str,
-			'-webkit-transform': str,
-			'transform': str,
-		}
+		var str = rotation(value)
+		return prefixTransform(str)
+	},
+	translation: function(value) {
+		var str = translation(value)
+		return prefixTransform(str)
 	},
 	'box-shadow': function(value) {
 		var shadow = value.slice(0,3).map(px).join(' ') + ' ' + rgba(value.slice(3))

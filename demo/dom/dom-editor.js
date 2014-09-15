@@ -26,6 +26,7 @@ function create(update) {
 	editor.duration = 5
 
 	var lastTime = -1
+	var fin = false
 
 	//render timeline
 	var engine = loop(function(dt) {
@@ -40,7 +41,9 @@ function create(update) {
 
 		if (time <= (editor.duration + 1)) {
 			update(time)
+			fin = false
 		} else {
+			fin = true
 			autoPlay = false
 			autoTime = 0
 		}
@@ -51,7 +54,7 @@ function create(update) {
 		autoTime = t
 	})
 	editor.on('update', function() {
-		lastTime = -1
+		update(editor.playhead())
 	})
 
 	function stopAuto() {
@@ -65,7 +68,8 @@ function create(update) {
 		if (key === 'space') {
 			ev.preventDefault()
 			autoPlay = !autoPlay
-			if (ev.shiftKey) {
+
+			if (fin || ev.shiftKey) {
 				autoPlay = true
 				autoTime = 0
 			}

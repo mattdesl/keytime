@@ -31,17 +31,26 @@ var flip = [
 raw.forEach(function(entry) {
 	var t = Timeline(entry.timeline)
 	
-	// if (entry.name === 'flip') {
-	// 	flip.forEach(function(p) {
-	// 		if (!t.property(p.name)) {
-	// 			t.addProperty( deepcopy(p) )
-	// 		}
-	// 	})	
-	// }
+	if (entry.name === 'flip') {
+		// var p = t.property('rotation')
+		// p.name = 'transform'
+		// p.keyframes.clear()
+		// p.value = [0,0,0,0,0,0]
+
+		// flip.forEach(function(p) {
+		// 	if (p.name === 'rotation') {
+
+		// 	}
+
+		// 	// if (!t.property(p.name)) {
+		// 	// 	t.addProperty( deepcopy(p) )
+		// 	// }
+		// })	
+		// entry.timeline = t.export()
+	}
 
 	
 	// entry.name = ''
-	// entry.timeline = t.export()
 })
 
 module.exports = raw

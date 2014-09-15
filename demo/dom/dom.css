@@ -10,9 +10,16 @@
 	box-sizing: border-box;
 	height: 100%;
 	border-style: solid;
-	-webkit-transform: rotateX(0deg);
 	-webkit-perspective: 800;
+	-moz-perspective: 800;
+	-ms-perspective: 800;
+	-o-perspective: 800;
+	perspective: 800;
 	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 }
 
 .widget {
