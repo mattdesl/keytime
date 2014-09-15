@@ -35,6 +35,12 @@ Widget.prototype.update = function(timeline, time) {
 
 function start() {
 	var editor = createEditor()
+	
+	//setup editor before loading in our timeline
+	var colors = ['background-color', 'border-color', 'color']
+	editor.constraint(colors, { min: 0, max: 255, step: 1, decimals: 0 })
+	editor.shy(['font-family', 'font-variant', 'font-weight'])
+	editor.valueEditor('box-shadow', function() {})
 
 	var autoPlay = true
 	var autoTime = 0
@@ -86,8 +92,6 @@ function start() {
 	editor.add(anim1, 'button1')
 	editor.add(anim2, 'button2')
 	editor.appendTo(document.body)
-	editor.open(0)
-	editor.open(1)
 	editor.hide(1)
 
 	editor.on('playhead', function(t) {
@@ -101,10 +105,16 @@ function start() {
 	events.on(editor.element, 'touchdown', stopAuto)
 	events.on(editor.element, 'mousedown', stopAuto)
 	events.on(window, 'keydown', function(ev) {
-		if (keycode(ev) === 'space') {
+		var key = keycode(ev)
+		if (key === 'space') {
 			ev.preventDefault()
 			autoPlay = !autoPlay
+		} else if (key === 'enter' || key === 'return') {
+			ev.preventDefault()
+			autoPlay = true
+			autoTime = 0
 		}
+
 	})
 }
 
