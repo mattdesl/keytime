@@ -35,6 +35,8 @@
     "test": "node test.js",
     "dev-dom": "beefy demo/dom/index.js --index=demo/dom/index-dev.html --open -- -t brfs",
     "build-dom": "browserify demo/dom/index.js -t brfs | uglifyjs -cm > demo/dom/bundle/bundle.js",
+    "dev-dom2": "beefy demo/dom/simple.js --index=demo/dom/index-dev.html --open -- -t brfs",
+    "build-dom2": "browserify demo/dom/simple.js -t brfs | uglifyjs -cm > demo/dom/bundle/bundle2.js",
     "dev-canvas": "beefy demo/canvas/simple.js --open -- -t brfs"
   },
   "testling": {
