@@ -20,7 +20,7 @@ domready(function() {
 	// could clamp it like so
 	editor.constraint('size', { min: 0, max: 100, step: 1, decimals: 1 })
 	editor.constraint('z-index', { decimals: 0, max: 1000 })
-	
+
 	window.editor = editor //for console debugging
 	var container = domify('<div class="main">')
 	document.body.appendChild(container)
@@ -57,6 +57,7 @@ domready(function() {
 		e.open = false
 	})	
 
+	editor.open(0)
 	editor.appendTo(document.body)
 	editor.run()
 
