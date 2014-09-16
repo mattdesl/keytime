@@ -71,5 +71,6 @@ p {
 }
 
 body {
+	overflow: hidden;
 	font: 16px 'Helvetica', sans-serif;
 }
