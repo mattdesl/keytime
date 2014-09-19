@@ -14,6 +14,7 @@ function create(update) {
 	//setup editor before loading in our timeline
 	var colors = ['background-color', 'border-color', 'color']
 	editor.constraint(colors, { min: 0, max: 255, step: 1, decimals: 0 })
+	editor.constraint('opacity', { min: 0, max: 1, step: 0.05, decimals: 2 })
 	editor.shy(['font-family', 'font-variant', 'font-weight'])
 
 	//ignore a few things that might be better suited with their own editors
@@ -54,7 +55,8 @@ function create(update) {
 		autoTime = t
 	})
 	editor.on('update', function() {
-		update(editor.playhead())
+		if (engine.running)
+			update(editor.playhead())
 	})
 
 	function stopAuto() {
@@ -75,11 +77,15 @@ function create(update) {
 			}
 		} else if (key === 'j') {
 			ev.preventDefault()
-			var pretty = ev.shiftKey
+			var pretty = ev.shiftKey ? 2 : undefined
 			console.log( JSON.stringify( editor.timelines(), undefined, pretty ) )
 		}
 	})
 	editor.run = engine.run.bind(engine)
+	
+	//this is just for our little demo, to edit in dev tool console
+	window.editor = editor 
+
 	// editor.stop = engine.stop.bind(engine)
 	return editor
 }

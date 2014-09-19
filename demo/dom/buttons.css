@@ -1,0 +1,41 @@
+@import url(http://weloveiconfonts.com/api/?family=iconicstroke);
+
+/* iconicstroke */
+[class*="iconicstroke-"]:before {
+  font-family: 'IconicStroke', sans-serif;
+}
+
+body {
+	overflow: hidden;
+	background: rgb(218, 132, 74);
+	margin: 40px;
+	font: 16px 'Open Sans Condensed', sans-serif;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+	width: inherit;
+	height: inherit;
+	text-align: center;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+#hamburger-button {
+	overflow: hidden;
+	border-style: solid;
+	position: relative;
+	box-sizing: border-box;
+}
+label {
+	position: absolute;
+	font-variant: small-caps;
+	font-size: 17px;
+	font-weight: bold;
+	color: rgb(80,80,80);
+}
+.close {
+	color: white;
+}

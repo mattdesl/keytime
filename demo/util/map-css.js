@@ -54,6 +54,7 @@ var css = {
 	'background-color': rgba,
 	'border-color': rgba,
 	'z-index': String,
+	opacity: Number,
 	color: rgba
 }
 

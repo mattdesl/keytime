@@ -1,9 +1,9 @@
 var domify = require('domify')
-var create = require('./dom-editor')
 var domready = require('domready')
-var Timeline = require('./keytime-css')
-var animate = require('./animate')
 var classes = require('dom-classes')
+var create = require('../util/dom-editor')
+var Timeline = require('../util/keytime-css')
+var animate = require('../util/animate')
 
 var css = require('fs').readFileSync(__dirname+'/dom.css', 'utf8')
 require('insert-css')(css)
@@ -11,7 +11,6 @@ require('insert-css')(css)
 
 // var animations = require('../data/group-empty.js')
 var animations = require('../data/group-data.js')
-
 
 domready(function() {
 	var editor = create(update)

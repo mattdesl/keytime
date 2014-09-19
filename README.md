@@ -52,7 +52,7 @@ function render(ctx, time) {
 There are a couple examples in the [demo](demo/) folder. Here are two:
 
 - [canvas/path animation](http://mattdesl.github.io/timeline-tests/demo1/index.html) - animates paths created with [path-illustrator](http://mattdesl.github.io/path-illustrator/demo/advanced.html)
-- [CSS animation, basic editor, timeline switching](http://mattdesl.github.io/keytime/demo/dom/)
+- [CSS animations and editor](http://mattdesl.github.io/keytime/demo/dom/index.html)
 
 
 ## wiki
