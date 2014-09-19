@@ -10,5 +10,8 @@ module.exports = [
 		{ name: 'position', value: [0, 0.5] },
 		{ name: 'color', value: [255,255,255] },
 		{ name: 'opacity', value: 1 },
+	] },
+	{ name: 'label', timeline: [
+		{ name: 'position', value: [0, 0] }
 	] }
 ]
