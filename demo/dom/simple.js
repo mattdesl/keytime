@@ -13,8 +13,6 @@ require('insert-css')(css)
 var animations = require('../data/group-data.js')
 
 
-
-
 domready(function() {
 	var editor = create(update)
 	// could clamp it like so
@@ -45,8 +43,6 @@ domready(function() {
 			}
 			flip.appendChild(element)
 		}
-
-		
 
 		widgets.push({
 			name: a.name,
