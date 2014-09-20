@@ -53,6 +53,8 @@ There are a couple examples in the [demo](demo/) folder. Here are two:
 
 - [canvas/path animation](http://mattdesl.github.io/timeline-tests/demo1/index.html) - animates paths created with [path-illustrator](http://mattdesl.github.io/path-illustrator/demo/advanced.html)
 - [CSS animations and editor](http://mattdesl.github.io/keytime/demo/dom/index.html)
+- [CSS 3D transforms](http://mattdesl.github.io/keytime/demo/dom/index2.html)
+- [button proof of concept](http://mattdesl.github.io/keytime/demo/dom/index3.html)
 
 
 ## wiki

@@ -28,7 +28,12 @@ domready(function() {
 	})
 
 	editor.appendTo(document.body)
-	editor.run()
+
+	//allow CDN icons time to load before starting
+	setTimeout(editor.run.bind(editor), 1000)
+
+	//be sure to avoid any flash of unstyled content
+	update(0)
 
 	events.on(container, 'click', editor.restart.bind(editor))
 
