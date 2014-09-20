@@ -38,6 +38,7 @@
     "build-dom": "browserify demo/dom/index.js -t brfs | uglifyjs -cm > demo/dom/bundle/bundle.js",
     "dev-dom2": "beefy demo/dom/simple.js --index=demo/dom/index-dev.html --open -- -t brfs",
     "dev-buttons": "beefy demo/dom/buttons.js --index=demo/dom/index-dev.html --open -- -t brfs",
+    "build-buttons": "browserify demo/dom/buttons.js -t brfs | uglifyjs -cm > demo/dom/bundle/bundle3.js",
     "build-dom2": "browserify demo/dom/simple.js -t brfs | uglifyjs -cm > demo/dom/bundle/bundle2.js",
     "dev-canvas": "beefy demo/canvas/simple.js --open -- -t brfs"
   },

@@ -3,6 +3,7 @@ var domready = require('domready')
 var animate = require('../util/animate-query')
 var create = require('../util/dom-editor')
 var Timeline = require('../../')
+var events = require('dom-events')
 
 var fs = require('fs')
 
@@ -28,6 +29,8 @@ domready(function() {
 
 	editor.appendTo(document.body)
 	editor.run()
+
+	events.on(container, 'click', editor.restart.bind(editor))
 
 	function update(time) {
 		animate(time, container, animations)

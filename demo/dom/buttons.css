@@ -23,19 +23,26 @@ figure {
 	left: 0;
 }
 
-#hamburger-button {
+#basic-button {
 	overflow: hidden;
 	border-style: solid;
 	position: relative;
+	cursor: pointer;
 	box-sizing: border-box;
 }
 label {
+	pointer-events: none;
 	position: absolute;
 	font-variant: small-caps;
 	font-size: 17px;
 	font-weight: bold;
 	color: rgb(80,80,80);
 }
-.close {
+.icon {
+	-webkit-transform-origin: 50% 33%;
+	-moz-transform-origin: 50% 33%;
+	-ms-transform-origin: 50% 33%;
+	-o-transform-origin: 50% 33%;
+	transform-origin: 50% 33%;
 	color: white;
 }

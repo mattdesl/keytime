@@ -19,6 +19,11 @@ function translation(value) {
 	return 'translateX('+value[0]+'px) translateY('+value[1]+'px) translateZ('+value[2]+'px)'
 }
 
+
+function scale(value) {
+	return 'scale('+value[0]+', '+value[1]+')'
+}
+
 function prefixTransform(str) {
 	return { 
 		'-o-transform': str,
@@ -39,6 +44,10 @@ var css = {
 	},
 	rotation: function(value) {
 		var str = rotation(value)
+		return prefixTransform(str)
+	},
+	scale: function(value) {
+		var str = scale(value)
 		return prefixTransform(str)
 	},
 	translation: function(value) {

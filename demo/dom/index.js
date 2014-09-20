@@ -7,11 +7,11 @@ var domify = require('domify')
 var css = require('fs').readFileSync(__dirname+'/dom.css', 'utf8')
 require('insert-css')(css)
 
-var mapStyle = require('./map-css')
+var mapStyle = require('../util/map-css')
 var events = require('dom-events')
 var keycode = require('keycode')
 
-var Timeline = require('./keytime-css')
+var Timeline = require('../util/keytime-css')
 var anim1 = Timeline( require('../data/dom-1') )
 var anim2 = Timeline( require('../data/dom-2') )
 var curTimeline = anim1

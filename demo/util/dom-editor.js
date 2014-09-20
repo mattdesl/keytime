@@ -14,7 +14,13 @@ function create(update) {
 	//setup editor before loading in our timeline
 	var colors = ['background-color', 'border-color', 'color']
 	editor.constraint(colors, { min: 0, max: 255, step: 1, decimals: 0 })
-	editor.constraint('opacity', { min: 0, max: 1, step: 0.05, decimals: 2 })
+
+	var normalized = ['opacity']
+	editor.constraint(normalized, { min: 0, max: 1, step: 0.05, decimals: 2 })
+
+	editor.constraint('border-radius', { min: 0 })
+	editor.constraint('scale', { step: 0.05, decimals: 2 })
+
 	editor.shy(['font-family', 'font-variant', 'font-weight'])
 
 	//ignore a few things that might be better suited with their own editors
@@ -82,7 +88,11 @@ function create(update) {
 		}
 	})
 	editor.run = engine.run.bind(engine)
-	
+	editor.restart = function() {
+		autoTime = 0
+		autoPlay = true
+	}
+
 	//this is just for our little demo, to edit in dev tool console
 	window.editor = editor 
 
