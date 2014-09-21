@@ -10,7 +10,8 @@
     "inherits": "^2.0.1",
     "keyframes": "^2.2.1",
     "keytime-editor": "0.0.3",
-    "lerp-array": "^1.0.2"
+    "lerp-array": "^1.0.2",
+    "xtend": "^4.0.0"
   },
   "devDependencies": {
     "brfs": "^1.2.0",

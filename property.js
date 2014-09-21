@@ -4,8 +4,12 @@
 //  color [r, g, b, a]
 //  alpha [a]
 
+//It will also store application-level flags like
+//whether or not your data is hidden, or what type
+//of property you might be dealing with
+
 var keyframes = require('keyframes')
-var DEFAULT_TYPE = 'array'
+var xtend = require('xtend')
 
 function Property(data) {
 	if (!(this instanceof Property)) 
@@ -13,7 +17,6 @@ function Property(data) {
 
 	this.keyframes = keyframes()
 	this.value = null
-	this.type = DEFAULT_TYPE
 	this.name = ''
 	if (data)
 		this.load(data)
@@ -24,12 +27,9 @@ Property.prototype.dispose = function() {
 }
 
 Property.prototype.export = function() {
-	return {
-		name: this.name,
-		type: this.type,
-		value: this.value,
+	return xtend(this, {
 		keyframes: this.keyframes.frames
-	}
+	})
 }
 
 Property.prototype.load = function(data) {
@@ -38,11 +38,14 @@ Property.prototype.load = function(data) {
 	if (!data)
 		return
 	
-	this.name = data.name
-	this.type = typeof data.type === 'string' ? data.type : DEFAULT_TYPE
-	this.value = data.value
-	if (data.keyframes)
-		this.keyframes.frames = data.keyframes
+	for (var k in data) {
+		if (!data.hasOwnProperty(k))
+			continue
+		if (k === 'keyframes')
+			this.keyframes.frames = data.keyframes
+		else
+			this[k] = data[k]
+	}
 }
 
 module.exports = Property
