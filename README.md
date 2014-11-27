@@ -49,7 +49,7 @@ function render(ctx, time) {
 
 ## demos
 
-There are a couple examples in the [demo](demo/) folder. Here are two:
+There are a couple examples in the [demo](demo/) folder. Some of them use the work in progress [keytime-editor](https://github.com/mattdesl/keytime-editor/). 
 
 - [canvas/path animation](http://mattdesl.github.io/timeline-tests/demo1/index.html) - animates paths created with [path-illustrator](http://mattdesl.github.io/path-illustrator/demo/advanced.html)
 - [CSS animations and editor](http://mattdesl.github.io/keytime/demo/dom/index.html)
