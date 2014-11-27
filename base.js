@@ -29,7 +29,6 @@ TimelineBase.prototype.addProperty = function(propData) {
 	this.properties.push(new Property(propData))
 }
 
-
 //Finds the max duration of all properties
 TimelineBase.prototype.duration = function() {
 	var maxTime = 0

@@ -23,6 +23,12 @@ figure {
 	left: 0;
 }
 
+.arrow-right {
+	width: 16px;
+	height: 16px;
+	background: url(demo/dom/arrow-right.png) transparent no-repeat center;
+}
+
 #basic-button {
 	overflow: hidden;
 	border-style: solid;
@@ -45,4 +51,19 @@ label {
 	-o-transform-origin: 50% 33%;
 	transform-origin: 50% 33%;
 	color: white;
+}
+
+
+/* HAMBURGER ! */
+
+.hamburger-button {
+	overflow: hidden;
+	border-style: solid;
+	position: relative;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+.hamburger-bar {
+	position: absolute;
+	display: block;
 }

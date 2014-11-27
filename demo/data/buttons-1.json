@@ -1,1 +1,258 @@
-[{"name":"#basic-button","timeline":[{"name":"size","type":"array","value":[34,34],"keyframes":[{"time":0.82,"value":[34,34]},{"time":1.24,"value":[69,34],"ease":"cubicOut"}]},{"name":"background-color","type":"array","value":[255,255,255],"keyframes":[{"time":0.81,"value":[255,255,255]}]},{"name":"border-radius","type":"array","value":31.5,"keyframes":[{"time":0.85,"value":31.5},{"time":1.1,"value":2,"ease":"quintOut"}]},{"name":"border-color","type":"array","value":[80,80,80],"keyframes":[{"time":0.8,"value":[80,80,80]},{"time":0.95,"value":[255,255,255],"ease":"expoOut"}]},{"name":"border-width","type":"array","value":2,"keyframes":[{"time":0.5,"value":2,"ease":"expoOut"}]}]},{"name":".icon","timeline":[{"name":"position","type":"array","value":[15.5,3],"keyframes":[{"time":0,"value":[-2,-22.5]},{"time":0.28,"value":[-2,3],"ease":"expoOut"},{"time":0.85,"value":[-2,3]},{"time":1.91,"value":[15.5,3],"ease":"cubicOut"}]},{"name":"color","type":"array","value":[100,100,100],"keyframes":[{"time":0,"value":[100,100,100]},{"time":0.69,"value":[80,80,80]}]},{"name":"opacity","type":"array","value":1,"keyframes":[{"time":0.89,"value":1},{"time":1.25,"value":0.575}]},{"name":"scale","type":"array","value":[1.35,1.35],"keyframes":[{"time":0.795,"value":[1,1],"ease":"quartOut"},{"time":0.985,"value":[1.35,1.35],"ease":"quadOut"},{"time":1.315,"value":[1,1],"ease":"quadIn"}]}]},{"name":"label","timeline":[{"name":"position","type":"array","value":[9.5,1],"keyframes":[{"time":1.4,"value":[9.5,37]},{"time":1.73,"value":[9.5,1],"ease":"expoOut"}]}]}]
+[
+  {
+    "name": "#basic-button",
+    "timeline": [
+      {
+        "keyframes": [
+          {
+            "time": 0.82,
+            "value": [
+              34,
+              34
+            ]
+          },
+          {
+            "time": 1.24,
+            "value": [
+              69,
+              34
+            ],
+            "ease": "cubicOut"
+          }
+        ],
+        "value": [
+          34,
+          34
+        ],
+        "name": "size",
+        "type": "array"
+      },
+      {
+        "keyframes": [
+          {
+            "time": 0.81,
+            "value": [
+              255,
+              255,
+              255
+            ]
+          }
+        ],
+        "value": [
+          255,
+          255,
+          255
+        ],
+        "name": "background-color",
+        "type": "array"
+      },
+      {
+        "keyframes": [
+          {
+            "time": 0.85,
+            "value": 31.5
+          },
+          {
+            "time": 1.1,
+            "value": 2,
+            "ease": "quintOut"
+          }
+        ],
+        "value": 31.5,
+        "name": "border-radius",
+        "type": "array"
+      },
+      {
+        "keyframes": [
+          {
+            "time": 0.8,
+            "value": [
+              80,
+              80,
+              80
+            ]
+          },
+          {
+            "time": 0.95,
+            "value": [
+              255,
+              255,
+              255
+            ],
+            "ease": "expoOut"
+          }
+        ],
+        "value": [
+          80,
+          80,
+          80
+        ],
+        "name": "border-color",
+        "type": "array"
+      },
+      {
+        "keyframes": [
+          {
+            "time": 0.5,
+            "value": 2,
+            "ease": "expoOut"
+          }
+        ],
+        "value": 2,
+        "name": "border-width",
+        "type": "array"
+      }
+    ]
+  },
+  {
+    "name": ".icon",
+    "timeline": [
+      {
+        "keyframes": [
+          {
+            "time": 0,
+            "value": [
+              -2,
+              -22.5
+            ]
+          },
+          {
+            "time": 0.28,
+            "value": [
+              -2,
+              3
+            ],
+            "ease": "expoOut"
+          },
+          {
+            "time": 0.85,
+            "value": [
+              -2,
+              3
+            ]
+          },
+          {
+            "time": 1.91,
+            "value": [
+              15.5,
+              3
+            ],
+            "ease": "cubicOut"
+          }
+        ],
+        "value": [
+          -2,
+          -22.5
+        ],
+        "name": "position",
+        "type": "array"
+      },
+      {
+        "keyframes": [
+          {
+            "time": 0,
+            "value": [
+              100,
+              100,
+              100
+            ]
+          },
+          {
+            "time": 0.69,
+            "value": [
+              80,
+              80,
+              80
+            ]
+          }
+        ],
+        "value": [
+          100,
+          100,
+          100
+        ],
+        "name": "color",
+        "type": "array"
+      },
+      {
+        "keyframes": [
+          {
+            "time": 0.89,
+            "value": 1
+          },
+          {
+            "time": 1.25,
+            "value": 0.575
+          }
+        ],
+        "value": 1,
+        "name": "opacity",
+        "type": "array"
+      },
+      {
+        "keyframes": [
+          {
+            "time": 0.795,
+            "value": [
+              1,
+              1
+            ],
+            "ease": "quartOut"
+          },
+          {
+            "time": 0.985,
+            "value": [
+              1.35,
+              1.35
+            ],
+            "ease": "quadOut"
+          },
+          {
+            "time": 1.315,
+            "value": [
+              1,
+              1
+            ],
+            "ease": "quadIn"
+          }
+        ],
+        "value": [
+          1,
+          1
+        ],
+        "name": "scale",
+        "type": "array"
+      }
+    ]
+  },
+  {
+    "name": "label",
+    "timeline": [
+      {
+        "keyframes": [
+          {
+            "time": 1.4,
+            "value": [
+              9.5,
+              37
+            ]
+          },
+          {
+            "time": 1.73,
+            "value": [
+              9.5,
+              1
+            ],
+            "ease": "expoOut"
+          }
+        ],
+        "value": [
+          9.5,
+          37
+        ],
+        "name": "position",
+        "type": "array"
+      }
+    ]
+  }
+]  
