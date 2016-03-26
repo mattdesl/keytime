@@ -1,6 +1,6 @@
 {
   "name": "keytime",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "keyframed animation tools",
   "main": "index.js",
   "license": "MIT",
